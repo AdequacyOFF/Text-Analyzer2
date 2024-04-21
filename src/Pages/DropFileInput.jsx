@@ -72,19 +72,24 @@ const DropFileInput = props => {
                         }
                         <button className="uploadButton" onClick={(event) => {
                                 event.preventDefault();
-                                const response = fetch('https://example.com/api/upload', {
+                                const formData = new FormData();
+                                for (const file of fileList) {
+                                  formData.append('files', file);
+                                }
+                                fetch('http://127.0.0.1:8080/', {
                                   method: 'POST',
-                                  body: blob(fileList),
-                                  headers: {
-                                    'Content-Type': 'boundary',
-                                  },
-                                });
-                              
-                                response.then((data) => {
-                                  if (!response.ok) {
-                                    throw new Error('Failed to upload files');
-                                  }
-                                });
+                                  body: formData,
+                                })
+                                 .then(response => {
+                                    if (response.status!== 200) {
+                                      console.error('Error:', response.status);
+                                      return;
+                                    }
+                                    console.log('File uploaded!');
+                                  })
+                                 .catch(error => {
+                                    console.error('Error:', error);
+                                  });
                               }}>
                             ЗАГРУЗИТЬ
                         </button>
