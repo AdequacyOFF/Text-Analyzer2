@@ -74,9 +74,9 @@ const DropFileInput = props => {
                                 event.preventDefault();
                                 const response = fetch('https://example.com/api/upload', {
                                   method: 'POST',
-                                  body: JSON.stringify(fileList),
+                                  body: blob(fileList),
                                   headers: {
-                                    'Content-Type': 'application/json',
+                                    'Content-Type': 'boundary',
                                   },
                                 });
                               
