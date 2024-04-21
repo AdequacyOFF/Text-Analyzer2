@@ -15,7 +15,7 @@ function Document() {
       </div>
       <div className='DropFileInput'>
           <DropFileInput onFileChange={(files) => onFileChange(files)}/>
-    </div>
+      </div>
       <form action="/">
         <button className='btn-doc-doc btn-doc-text-doc'>ТЕКСТ</button>
       </form>

@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "NanitoSans";
+  src: local("NanitoSans-Black"),
+    local("NanitoSans-Black"),
+    url("NanitoSans-Black.ttf") format("ttf"),
+    url("nanitosans-black.woff") format("woff"),
+    url("nanitosans-black.woff2") format("woff2"),
+  
+}
+
+.DragAndDrop {
+  font-family: "NanitoSans", sans-serif;
+}
+
 .drop-file-input {
   position: relative;
   width: 458px;
@@ -44,6 +58,10 @@
 
 .drop-file-preview p {
   font-weight: 500;
+}
+
+.drop-file-preview{
+  font-family: "NanitoSans", sans-serif;
 }
 
 .drop-file-preview__title {
