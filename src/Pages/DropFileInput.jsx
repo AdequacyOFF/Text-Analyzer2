@@ -35,7 +35,7 @@ const DropFileInput = props => {
     }
 
     return (
-        <>
+        <div className="DragAndDrop">
             <div
                 ref={wrapperRef}
                 className="drop-file-input"
@@ -70,7 +70,7 @@ const DropFileInput = props => {
                     </div>
                 ) : null
             }
-        </>
+        </div>
     );
 }
 
