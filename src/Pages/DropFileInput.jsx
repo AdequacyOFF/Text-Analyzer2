@@ -45,7 +45,7 @@ const DropFileInput = props => {
             >
                 <div className="drop-file-input__label">
                     <img src={uploadImg} alt="" />
-                    <p>ПЕРЕТАЩИТЕ ИЛИ ЗАГРУЗИТЕ ФАЙЛ</p>
+                    <p>ПЕРЕНЕСИТЕ ИЛИ НАЖМИТЕ ДЛЯ ЗАГРУЗКИ ФАЙЛА</p>
                 </div>
                 <input type="file" value="" onChange={onFileDrop}/>
             </div>
@@ -57,6 +57,7 @@ const DropFileInput = props => {
                         </p>
                         {
                             fileList.map((item, index) => (
+                                
                                 <div key={index} className="drop-file-preview__item">
                                     <img src={ImageConfig[item.type.split('/')[1]] || ImageConfig['default']} alt="" />
                                     <div className="drop-file-preview__item__info">
@@ -65,8 +66,28 @@ const DropFileInput = props => {
                                     </div>
                                     <span className="drop-file-preview__item__del" onClick={() => fileRemove(item)}>x</span>
                                 </div>
+                                
                             ))
+                            
                         }
+                        <button onClick={(event) => {
+                                event.preventDefault();
+                                const response = fetch('https://example.com/api/upload', {
+                                  method: 'POST',
+                                  body: JSON.stringify(fileList),
+                                  headers: {
+                                    'Content-Type': 'application/json',
+                                  },
+                                });
+                              
+                                response.then((data) => {
+                                  if (!response.ok) {
+                                    throw new Error('Failed to upload files');
+                                  }
+                                });
+                              }}>
+                            Upload
+                        </button>
                     </div>
                 ) : null
             }
