@@ -70,7 +70,7 @@ const DropFileInput = props => {
                             ))
                             
                         }
-                        <button onClick={(event) => {
+                        <button className="uploadButton" onClick={(event) => {
                                 event.preventDefault();
                                 const response = fetch('https://example.com/api/upload', {
                                   method: 'POST',
@@ -86,7 +86,7 @@ const DropFileInput = props => {
                                   }
                                 });
                               }}>
-                            Upload
+                            ЗАГРУЗИТЬ
                         </button>
                     </div>
                 ) : null
