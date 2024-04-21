@@ -91,7 +91,7 @@ const DropFileInput = props => {
                                     console.error('Error:', error);
                                   });
                               }}>
-                            ЗАГРУЗИТЬ
+                            <img src="src/Images/upload.png" alt="Upload" />
                         </button>
                     </div>
                 ) : null
