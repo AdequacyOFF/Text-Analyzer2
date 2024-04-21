@@ -14,14 +14,14 @@ function Document() {
 
       </div>
       <div className='DropFileInput'>
-          <DropFileInput onFileChange={(files) => onFileChange(files)}/>
+          <DropFileInput onFileChange={(files) => onFileChange(files)}/> {/* Функция для перетаскивания файлов */}
       </div>
-      <form action="/">
+      {/* <form action="/">
         <button className='btn-doc-doc btn-doc-text-doc'>ТЕКСТ</button>
       </form>
       <form action="/Url">
         <button className='btn-url-doc btn-url-text-doc'>URL</button>
-      </form>
+      </form> */}
     </div>
   )
 }
