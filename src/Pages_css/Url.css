@@ -63,3 +63,29 @@
   background: rgb(255, 255, 255); 
   margin-left: 20%;
 }
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  /* отображаем курсор в виде руки при наведении; некоторые
+  считают, что необходимо оставлять стрелочный вид для кнопок */
+  cursor: pointer;
+}
+.search_btn{
+  position: absolute;
+  margin-top: 65px;
+  margin-left: 78%;
+  
+}
+.search_btn>img{
+  width: 34px;
+  height: 34px;
+}
+.search_btn:hover{
+  opacity: 0.5;
+}
+
+
