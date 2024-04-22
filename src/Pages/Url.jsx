@@ -13,7 +13,7 @@ function Url() {
             inputElement.addEventListener('input', (event) => {
               
               const inputValue = event.target.value;
-              fetch('http://127.0.0.1:8080/', {
+              fetch('http://127.0.0.1:8080/url', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
