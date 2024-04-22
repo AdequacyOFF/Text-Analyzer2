@@ -76,7 +76,7 @@ const DropFileInput = props => {
                                 for (const file of fileList) {
                                   formData.append('files', file);
                                 }
-                                fetch('http://127.0.0.1:8080/', {
+                                fetch('http://127.0.0.1:8080/filesUpload', {
                                   method: 'POST',
                                   body: formData,
                                 })
