@@ -1,23 +1,32 @@
+
 import os
-from flask import Flask, request, redirect, url_for
+from flask import Flask, request, make_response
 from werkzeug.utils import secure_filename
 
 UPLOAD_FOLDER = "C:/Users/User/Desktop/Text-Analyzer2-Files"
-ALLOWED_EXTENSIONS = set(['txt','doc'])
+ALLOWED_EXTENSIONS = set(['txt'])
 
 app = Flask(__name__)
-app.run(host='0.0.0.0', port=8080)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-def allowed_file(filename):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
-@app.route('/', methods=['GET', 'POST'])
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
+
+@app.route('/filesUpload', methods=['GET', 'POST'])
 def upload_file():
+    print ("upload_file()")
     if request.method == 'POST':
-        file = request.files['file']
+        if 'files' not in request.files:
+            return make_response("No file part", 507)
+        print(request.files)
+        file = request.files['files']
+        print (file)
+        if file.filename == '':
+            return make_response("No selected file", 507)
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
+            print(filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return redirect(url_for('uploaded_file', filename=filename))
-    return 1
+            return make_response("File have been uploaded", 200)
+        return make_response("Invalid extension", 507)
+app.run(host='127.0.0.1', port=8080)
