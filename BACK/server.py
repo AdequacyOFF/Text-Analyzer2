@@ -17,12 +17,6 @@ def url_parse():
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
-
-@app.route('/url', methods=['GET', 'POST'])
-def url_parse():
-    print ("url_parse()")
-    if request.method == 'POST':
-        return make_response("URL have been parsed", 200)
     
 @app.route('/filesUpload', methods=['GET', 'POST'])
 def upload_file():
