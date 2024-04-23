@@ -10,7 +10,7 @@ function Url() {
   };
 
   const handleSubmit = () => {
-    fetch('http://127.0.0.1:8080/', {
+    fetch('http://127.0.0.1:8080/url', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
