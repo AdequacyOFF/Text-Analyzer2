@@ -9,6 +9,12 @@ ALLOWED_EXTENSIONS = set(['txt'])
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+@app.route('/url', methods=['GET', 'POST'])
+def url_parse():
+    print ("url_parse()")
+    if request.method == 'POST':
+        return make_response("URL have been parsed", 200)
+
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
