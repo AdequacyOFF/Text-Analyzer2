@@ -13,7 +13,7 @@ function Text() {
   };
 
   const handleSubmit = () => {
-    fetch('http://127.0.0.1:8080/', {
+    fetch('http://127.0.0.1:8080/text', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ function Text() {
           className='input_field' //input_field
           placeholder='Начните писать текст...'
           onChange={handleChange}
-          style={{ resize: 'none' }}
+          //style={{ resize: 'none' }}
         />
         <button className='search_btn' type="button" onClick={handleSubmit}>
           <img src="src\Images\search.png" alt="" />
