@@ -2,7 +2,7 @@
 from Controllers.fileController import file_process
 from Controllers.urlController import url_process
 from Controllers.textController import text_process
-from flask import Flask, make_response, jsonify
+from flask import Flask
 from flask_cors import CORS
 
 UPLOAD_FOLDER = "C:/Users/User/Desktop/Text-Analyzer2-Files"
