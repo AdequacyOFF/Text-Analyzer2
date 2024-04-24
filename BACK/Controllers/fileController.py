@@ -1,11 +1,15 @@
 import os
 from flask import request, make_response
 from werkzeug.utils import secure_filename
+from NeuralNetwork.sentiment_classifier import SentimentClassifier
 
 def allowed_file(filename, allowedExtensions):
     return '.' in filename and filename.rsplit('.', 1)[1] in allowedExtensions
 
 def file_process(uploadFolder, allowedExtensions):
+    file_save(uploadFolder, allowedExtensions)
+
+def file_save(uploadFolder, allowedExtensions):
     print ("upload_file()")
     if request.method == 'POST':
         if 'files' not in request.files:
