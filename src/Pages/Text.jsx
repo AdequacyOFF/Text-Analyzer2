@@ -7,10 +7,14 @@ import React from "react";
 function Text() {
 
   const [inputValue, setInputValue] = useState("");
-
+  
   const handleChange = (event) => {
     setInputValue(event.target.value);
+
+    
   };
+
+  
 
   const handleSubmit = () => {
     fetch('http://127.0.0.1:8080/text', {
@@ -22,22 +26,23 @@ function Text() {
     });
   };
 
+
   return (
-    <div className="section">
+    <section>
 
       <div>
         <textarea autosize
-          className='input_field' //input_field
+          className='text_input' //input_field
           placeholder='Начните писать текст...'
+          style={{ resize: 'none'}}
           onChange={handleChange}
-          //style={{ resize: 'none' }}
         />
         <button className='search_btn' type="button" onClick={handleSubmit}>
           <img src="src\Images\search.png" alt="" />
         </button>
       </div>
       {/* <div className='answer-txt'></div> */}
-    </div>
+    </section>
     
   );
 };
