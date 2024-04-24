@@ -1,23 +1,27 @@
+
 from Controllers.fileController import file_process
 from Controllers.urlController import url_process
 from Controllers.textController import text_process
-from flask import Flask
+from flask import Flask, make_response, jsonify
+from flask_cors import CORS
 
 UPLOAD_FOLDER = "C:/Users/User/Desktop/Text-Analyzer2-Files"
 ALLOWED_EXTENSIONS = set(['txt'])
 
 app = Flask(__name__)
+CORS(app)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-@app.route('/text', methods=['GET', 'POST'])
+@app.route('/text', methods=['POST', 'OPTIONS'])
 def text_processing():
-    text_process()
+    print ('text processing')
+    return text_process()
 
 @app.route('/url', methods=['GET', 'POST'])
 def url_processing():
-    url_process()
+    return url_process()
 
-@app.route('/filesUpload', methods=['GET', 'POST'])
+@app.route('/filesUpload', methods=['POST'])
 def file_processing():
     return file_process(app.config['UPLOAD_FOLDER'], ALLOWED_EXTENSIONS)
 
