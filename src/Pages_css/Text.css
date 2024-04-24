@@ -16,15 +16,12 @@
     background: rgb(42, 42, 42);
     /* position: absolute; */
     width: 1034px;
-    /* min-height: 65px; */
+    height: 500px; 
     
     margin-left: 21.5%;
 }
 
-.text_input{
-    width: 1034px;
-    height: 100%;
-}
+
 
 .text_input{
     font-family: "NanitoSans", sans-serif;
@@ -54,6 +51,39 @@ section{
     right: 109px;
     top: 135px;
     bottom: 0;
+}
+
+.Processing_btn {
+  width: 458px;
+  height: 93px;
+  border-radius: 42px;
+  box-shadow: 0px 6px 21px 2px rgba(0, 0, 0, 0.25);
+  background: var(--border-color);
+  margin-left: 37%;
+  margin-top: 26px;
+}
+
+.Processing_btn:hover {
+  box-shadow: 0px 6px 21px 2px rgba(0, 0, 0, 0.25);
+  background: var(--border-color);
+  opacity: 0.6; 
+}
+
+.Processing_btn::after {
+  box-shadow: 0px 6px 21px 2px rgba(0, 0, 0, 0.25);
+  background: var(--border-color);
+  opacity: 0.6;   
+}
+
+.Processing_btn {
+  font-family: "NanitoSans", sans-serif;
+  font-weight: 600px;
+  font-size: 36px;
+}
+
+.Processing_btn>img{
+  width: 212px;
+  height: auto;
 }
 
 
