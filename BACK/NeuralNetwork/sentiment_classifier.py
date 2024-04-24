@@ -1,5 +1,5 @@
 from transformers import BertTokenizer, BertForSequenceClassification
-import utils as U
+import NeuralNetwork.utils as U
 
 import os
 import gdown
