@@ -2,6 +2,7 @@
 from Controllers.fileController import file_process
 from Controllers.urlController import url_process
 from Controllers.textController import text_process
+from Controllers.basicAuthController import basic_auth
 from flask import Flask
 from flask_cors import CORS
 
@@ -12,9 +13,12 @@ app = Flask(__name__)
 CORS(app)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-@app.route('/text', methods=['POST', 'OPTIONS'])
+@app.before_request
+def basic_authentication():
+    return basic_auth()
+    
+@app.route('/text', methods=['POST'])
 def text_processing():
-    print ('text processing')
     return text_process()
 
 @app.route('/url', methods=['GET', 'POST'])
