@@ -1,0 +1,99 @@
+.Footer{
+  background-color: rgb(42, 42, 42);
+  height: 210px;
+  margin-top: -1%;
+  box-shadow: 0px 4px 38px 29px rgba(0, 0, 0, 0.25);
+}
+
+
+.Footer {
+  font-family: "NanitoSans", sans-serif;
+}
+
+.Strip{
+  width: 1622px;
+  color: rgb(114, 114, 114);
+  background-color: rgb(114, 114, 114);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -10px;
+  
+  
+}
+
+.Logo_company{
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+.Logo_znania{
+  width: auto !important;
+  height: 50px;
+  margin-right: 10px;
+  margin-bottom: 7px;
+}
+
+.Logo_AdOFF{
+  width: 71px;
+  height: 71px;
+  margin-left: -15px;
+  margin-bottom: -5px;
+}
+
+.Logo_tea_footer{
+  width: 102px;
+  height: 28px;
+  
+  
+}
+
+.Logo_footer{
+  margin-left: 149px;
+  margin-bottom: 15px;
+}
+
+.Cooperation_text a {
+  display: block;
+  margin-right: 10px;
+}
+
+.Cooperation_text {
+  margin-top: 18px;
+}
+
+.Cooperation_text a {
+  font-size: 10px;
+  color: rgb(196, 196, 196);
+}
+
+.Cooperation{
+  display: flex;
+  margin-right: 21px;
+}
+
+.emoji img{
+  position: relative;
+  width: 604px;
+  height: 67px;
+  margin-top: 30px;
+  margin-left: 125%;
+}
+
+
+.Copyright p{
+  color: rgb(114, 114, 114);
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.icons_contact img{
+  width: 50px;
+  height: 50px;
+}
+
+.icons_contact{
+  margin-left: 45.8%;
+}
