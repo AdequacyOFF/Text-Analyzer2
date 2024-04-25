@@ -8,8 +8,8 @@ function Footer() {
       <div className='Cooperation'>
         <div className='Logo_footer'>
           <div className='Logo_company'>
-            <img className='Logo_znania' src="src\Images\Logo_znania.png" alt=""/>
-            <img className='Logo_AdOFF' src="src\Images\Logo_AdOFF.png" alt="" />
+            <img className='Logo_znania' src="src\Images\Logo_znania.png" alt="" onClick={() => window.open("https://знаниевики.рф")}/>
+            <img className='Logo_AdOFF' src="src\Images\Logo_AdOFF.png" alt="" onClick={() => window.open("https://github.com/AdequacyOFF")} />
           </div>
           <div className='Logo_product'>
             <img  className='Logo_tea_footer' src="src\Images\Logo_tea_footer.png" alt="" />
