@@ -10,10 +10,11 @@
 
 
 .Logo{
-    width: 96px;
-    height: 106px;
+    width: 267px;
+    height: 58px;
     position: absolute;
     left: 23px;
+    margin-top: 27px;
 }
 
 .Head{
