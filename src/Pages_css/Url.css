@@ -50,17 +50,15 @@
   bottom: 0;
 }
 
-.answer-txt{
-  position: absolute;
+.answer-url{
   width: 1033.74px;
-  height: 1558.43px;
-  left: 23px;
-  right: 644.26px;
-  top: 146px;
-  bottom: -759.43px;
+  margin-top: 150px;
   box-shadow: 10px 10px 16px 6px rgba(0, 0, 0, 0.25);
   background: rgb(255, 255, 255); 
   margin-left: 20%;
+  padding: 20px;
+  
+
 }
 
 button {
@@ -87,4 +85,9 @@ button {
   opacity: 0.5;
 }
 
+.answer-url-frame{
+  border: 2px solid rgb(89, 89, 89);
+  padding: 12px;
+  min-height: 1000px;
+}
 
