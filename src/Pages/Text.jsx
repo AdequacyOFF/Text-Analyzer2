@@ -30,10 +30,11 @@ function Text() {
           className='input_field' //input_field
           placeholder='Начните писать текст...'
           onChange={handleChange}
-          //style={{ resize: 'none' }}
+          style={{ resize: 'none', height: '500px' }}
+          
         />
-        <button className='search_btn' type="button" onClick={handleSubmit}>
-          <img src="src\Images\search.png" alt="" />
+        <button className='Processing_btn' type="button" onClick={handleSubmit}>
+          <img src="src/Images/Processing.png" alt="Processing" />
         </button>
       </div>
       {/* <div className='answer-txt'></div> */}

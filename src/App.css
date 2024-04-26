@@ -9,23 +9,3 @@
     padding: 0;
     margin: 0;
 }
-
-.fear{
-    background-color: green;
-}
-
-.neutral{
-    background-color: rgb(255, 255, 255);
-}
-
-.sadness{
-    background-color: blue;
-}
-
-.joy{
-    background-color: yellow;
-}
-
-.output-text{
-    margin-right: 5px;
-}

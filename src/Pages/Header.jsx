@@ -5,7 +5,7 @@ function Header() {
 
   return (
     <div className='Head'>
-      <img src="src/Images/Logo.png" alt="" className='Logo'/>
+      <img src="src/Images/LOGO_tea.png" alt="" className='Logo'/>
       <nav>
         <ul>
           <li className='navigation txt anable'><Link to='/'>ТЕКСТ</Link></li>

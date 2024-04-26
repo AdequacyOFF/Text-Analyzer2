@@ -28,9 +28,9 @@ function Url() {
     fetch('http://127.0.0.1:8080/url', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'text/html; charset=utf',
       },
-      body: JSON.stringify({ inputValue }),
+      body: inputValue,
     });
   };
 
