@@ -14,3 +14,33 @@
     margin-top: 100%;
     width: 100%;
 }
+
+.Neutral{
+
+} 
+
+.Joy{
+    background: rgba(245, 213, 63,0.7);
+}
+
+.Sadness{
+    background: rgba(99, 111, 189,0.7);
+}
+
+.Surprise{
+    background: rgba(8, 232, 222,0.7);
+}
+
+.Fear{
+    background: rgba(134, 219, 74,0.5);
+}
+
+.Anger{
+    background: rgba(222, 44, 44,0.5);
+}
+.output-text{
+    margin-right: 5px;
+    border-radius: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}

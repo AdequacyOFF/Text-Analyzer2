@@ -86,5 +86,20 @@ section{
   height: auto;
 }
 
+.answer-txt-frame{
+  border: 2px solid rgb(89, 89, 89);
+  padding: 12px;
+  min-height: 1000px;
+}
 
+.answer-txt{
+  width: 1033.74px;
+  margin-top: 150px;
+  box-shadow: 10px 10px 16px 6px rgba(0, 0, 0, 0.25);
+  background: rgb(255, 255, 255); 
+  margin-left: 20%;
+  padding: 20px;
+  
+
+}
 

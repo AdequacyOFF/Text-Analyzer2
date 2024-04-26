@@ -1,6 +1,7 @@
 import { useState } from "react";
 import '../Pages_css/Text.css';
 import React from "react";
+import OutputText from "./OutPutText.jsx";
 
 
 
@@ -37,7 +38,11 @@ function Text() {
           <img src="src/Images/Processing.png" alt="Processing" />
         </button>
       </div>
-      {/* <div className='answer-txt'></div> */}
+      <div className='answer-txt'>
+        <div className='answer-txt-frame'>
+          <OutputText />
+        </div>
+      </div>
     </div>
     
   );
