@@ -9,3 +9,8 @@
     padding: 0;
     margin: 0;
 }
+.footer{
+    position: sticky;
+    margin-top: 100%;
+    width: 100%;
+}
