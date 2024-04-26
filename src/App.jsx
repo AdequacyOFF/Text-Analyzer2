@@ -7,7 +7,6 @@ import Url from './Pages/Url.jsx'
 import Text from './Pages/Text.jsx'
 
 function App() {
-
   return (
     <div className='wrapper'>
     <header className='header'><Header></Header></header>
