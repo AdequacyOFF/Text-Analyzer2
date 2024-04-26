@@ -38,7 +38,7 @@ function Url() {
         <div className='answer-url-frame'>
           <OutPutText />
         </div>
-      </div>
+      </div>  
     </div>
     
   );
