@@ -1,18 +1,49 @@
-
+import React from "react";
 
 function OutputText() {
 
-    const data = [['Десять лет назад, в середине 2000-х годов, в машинном обучении началась революция В 2005-2006 годах группы исследователей под руководством Джеффри Хинтона (Geoffrey Hinton) в университете Торонто и Йошуа Бенджи (Yoshua Bengio) в университете Монреаля научились обучать глубокие нейронные сети ', 'Neutral', 99.97, 0.01, 0.01, 0.01, 0.0, 0.01],
-
-  ['Сегодня был ужасный день С утра я проснулась от того, что опоздала на работу ', 'Sadness', 0.03, 0.05, 99.68, 0.03, 0.14, 0.07],
-
-  ['Вы чувствуете, как по спине пробегает холодок страха Вы убегаете от кого-то или чего-то, кто преследует вас ', 'Fear', 29.5, 0.8, 0.29, 0.59, 68.49, 0.33],
-
-  ['Я засыпаю с чувством благодарности за все хорошее, что произошло в этот день Я благодарен за свою семью, друзей, здоровье и все те возможности, которые мне дарит жизнь ', 'Joy', 0.03, 99.87, 0.04, 0.02, 0.01, 0.03]
-
-
-
-]
+    fetch('https://...')
+     .then(function(response) {
+        if (response.status!== 200) {
+          return Promise.reject(new Error(response.statusText));
+        }
+        return response.json();
+      })
+     .then(function(data) {
+        const sentence0 = data['sentence0'];
+        const conclusion0 = data['conclusion0'];
+        const neutral_p0 = data['neutral_p0'];
+        const joy_p0 = data['joy_p0'];
+        const sadness_p0 = data['sadness_p0'];
+        const surprise_p0 = data['surprise_p0'];
+        const fear_p0 = data['fear_p0'];
+        const anger_p0 = data['anger_p0'];
+        const sentence1 = data['sentence1'];
+        const conclusion1 = data['conclusion1'];
+        const neutral_p1 = data['neutral_p1'];
+        const joy_p1 = data['joy_p1'];
+        const sadness_p1 = data['sadness_p1'];
+        const surprise_p1 = data['surprise_p1'];
+        const fear_p1 = data['fear_p1'];
+        const anger_p1 = data['anger_p1'];
+        const sentence2 = data['sentence2'];
+        const conclusion2 = data['conclusion2'];
+        const neutral_p2 = data['neutral_p2'];
+        const joy_p2 = data['joy_p2'];
+        const sadness_p2 = data['sadness_p2'];
+        const surprise_p2 = data['surprise_p2'];
+        const fear_p2 = data['fear_p2'];
+        const anger_p2 = data['anger_p2'];
+        const total_neutral_p = data['total_neutral_p'];
+        const total_joy_p = data['total_joy_p'];
+        const total_sadness_p = data['total_sadness_p'];
+        const total_surprise_p = data['total_surprise_p'];
+        const total_fear_p = data['total_fear_p'];
+        const total_anger_p = data['total_anger_p'];
+      })
+     .catch(function(error) {
+        console.log('error', error);
+    });
 
     return (
             <div>
