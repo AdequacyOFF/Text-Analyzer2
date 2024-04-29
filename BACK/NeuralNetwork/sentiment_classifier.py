@@ -1,5 +1,5 @@
 from transformers import BertTokenizer, BertForSequenceClassification
-import utils as U
+import NeuralNetwork.utils as U
 from pymystem3 import Mystem
 
 import os
@@ -128,3 +128,5 @@ class SentimentClassifier:
                       round(total[5], 2)]
             
         return result, total_list
+    
+    
