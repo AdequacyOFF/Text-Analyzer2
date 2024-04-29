@@ -36,7 +36,7 @@ function Url() {
       </div>
       <div className='answer-url'>
         <div className='answer-url-frame'>
-          <OutPutText />
+          {/* <OutPutText /> */}
         </div>
       </div>  
     </div>

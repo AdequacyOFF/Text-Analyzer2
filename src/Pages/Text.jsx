@@ -40,7 +40,7 @@ function Text() {
       </div>
       <div className='answer-txt'>
         <div className='answer-txt-frame'>
-          <OutputText />
+          {/* <OutputText /> */}
         </div>
       </div>
     </div>
