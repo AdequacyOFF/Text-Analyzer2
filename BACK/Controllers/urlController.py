@@ -4,7 +4,8 @@ from NeuralNetwork.sentiment_classifier import SentimentClassifier
 from NeuralNetwork.JsonMaker import makeJson
 
 def url_process():
-    url = request.json.get('inputValue', None)
+    url = request.data
+    print(url)
     text = parse_url(url)
     classifier = SentimentClassifier()
     result, total_probs = classifier.summary(text)
