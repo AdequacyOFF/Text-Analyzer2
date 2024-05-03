@@ -1,7 +1,7 @@
 from transformers import BertTokenizer, BertForSequenceClassification
 import NeuralNetwork.utils as U
 from pymystem3 import Mystem
-from JsonMaker import makeJson
+from NeuralNetwork.JsonMaker import makeJson
 
 import os
 import torch
