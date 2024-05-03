@@ -8,6 +8,7 @@ import OutputText from "./OutPutText.jsx";
 function Text() {
 
   const [inputValue, setInputValue] = useState("");
+  const [responseData, setResponseData] = useState([]);
 
   const handleChange = (event) => {
     setInputValue(event.target.value);
@@ -20,7 +21,10 @@ function Text() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ inputValue }),
-    });
+    })
+    .then((response) => response.json())
+    .then((data) => setResponseData(data));
+     
   };
 
   return (
@@ -40,7 +44,7 @@ function Text() {
       </div>
       <div className='answer-txt'>
         <div className='answer-txt-frame'>
-          {/* <OutputText /> */}
+          <OutputText array={responseData} />
         </div>
       </div>
     </div>
