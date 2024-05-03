@@ -1,6 +1,7 @@
 from transformers import BertTokenizer, BertForSequenceClassification
 import NeuralNetwork.utils as U
 from pymystem3 import Mystem
+from NeuralNetwork.JsonMaker import makeJson
 
 import os
 import torch
@@ -127,6 +128,6 @@ class SentimentClassifier:
                       round(total[4], 2),
                       round(total[5], 2)]
             
-        return result, total_list
+        return makeJson(result, total_list)
     
     

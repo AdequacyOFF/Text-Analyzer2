@@ -1,5 +1,5 @@
 
-from Controllers.fileController import file_process
+from Controllers.dragAndDropController import file_process
 from Controllers.urlController import url_process
 from Controllers.textController import text_process
 from Controllers.basicAuthController import basic_auth
@@ -7,7 +7,7 @@ from flask import Flask
 from flask_cors import CORS
 
 UPLOAD_FOLDER = "C:/Users/User/Desktop/Text-Analyzer2-Files"
-ALLOWED_EXTENSIONS = set(['txt'])
+ALLOWED_EXTENSIONS = set(['txt','pdf'])
 
 app = Flask(__name__)
 CORS(app)

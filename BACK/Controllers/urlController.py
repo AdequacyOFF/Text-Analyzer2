@@ -8,5 +8,4 @@ def url_process():
     print(url)
     text = parse_url(url)
     classifier = SentimentClassifier()
-    result, total_probs = classifier.summary(text)
-    return Response(makeJson(result, total_probs), content_type="application/json")
+    return Response(classifier.summary(text), content_type="application/json")
