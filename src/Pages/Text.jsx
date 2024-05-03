@@ -3,8 +3,6 @@ import '../Pages_css/Text.css';
 import React from "react";
 import OutputText from "./OutPutText.jsx";
 
-
-
 function Text() {
 
   const [inputValue, setInputValue] = useState("");
@@ -22,11 +20,9 @@ function Text() {
       },
       body: JSON.stringify({ inputValue }),
     })
-    .then((response) => response.json())
-    .then((data) => setResponseData(data));
-     
+   .then((response) => response.json())
+   .then((data) => setResponseData(data));
   };
-
   return (
     <div className="section">
 
@@ -36,7 +32,6 @@ function Text() {
           placeholder='Начните писать текст...'
           onChange={handleChange}
           style={{ resize: 'none', height: '500px' }}
-          
         />
         <button className='Processing_btn' type="button" onClick={handleSubmit}>
           <img src="src/Images/Processing.png" alt="Processing" />
@@ -48,8 +43,7 @@ function Text() {
         </div>
       </div>
     </div>
-    
   );
 };
 
-export default Text
+export default Text;
