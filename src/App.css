@@ -15,27 +15,27 @@
     width: 100%;
 }
 
-.Neutral{
+.neutral{
 
 } 
 
-.Joy{
+.joy{
     background: rgba(245, 213, 63,0.7);
 }
 
-.Sadness{
+.sadness{
     background: rgba(99, 111, 189,0.7);
 }
 
-.Surprise{
+.surprise{
     background: rgba(8, 232, 222,0.7);
 }
 
-.Fear{
+.fear{
     background: rgba(134, 219, 74,0.5);
 }
 
-.Anger{
+.anger{
     background: rgba(222, 44, 44,0.5);
 }
 .output-text{
