@@ -2,3 +2,5 @@ node_modules
 sentim_ckp
 __pycache__
 ckp
+.pytest_cache
+.vscode
