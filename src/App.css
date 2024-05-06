@@ -10,13 +10,13 @@
     margin: 0;
 }
 .footer{
-    position: sticky;
+    position: sticky !important;
     margin-top: 100%;
     width: 100%;
 }
 
 .neutral{
-
+    background-color: rgb(173, 173, 173,0.7);
 } 
 
 .joy{
@@ -43,4 +43,12 @@
     border-radius: 5px;
     padding-left: 2px;
     padding-right: 2px;
+    font-family: "NanitoSans", sans-serif;
+    font-weight: 600px;
+    font-size: 28px;
 }
+
+/* .Diogram{
+    width: 600px;
+    height: auto;
+} */
