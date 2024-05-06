@@ -61,4 +61,4 @@ const Chart = ({ array }) => {
   );
   return pieChart;
 };
-export default ChartDiogram;
+export default Chart;
