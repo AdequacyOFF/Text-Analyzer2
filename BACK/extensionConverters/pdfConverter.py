@@ -1,4 +1,4 @@
-import pdfConverterUtils as PCU
+import extensionConverters.pdfConverterUtils as PCU
 import os
 
 def pdfConvert(pdf_path):
