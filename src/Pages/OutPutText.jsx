@@ -16,10 +16,9 @@ function OutputText({array}) {
           {array.slice(0, array.length-1).map((item, index) => (
             <span key={index} className={item["conclusion"] + " output-text"}>
               {item["text"]}
-              {item["array"] && (
-                <div className="Diogram">
+              { <div className="Diogram">
                   <Chart array={data}/>
-                </div>)}
+                </div>}
             </span>
           ))}
         </div>
