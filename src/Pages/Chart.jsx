@@ -1,64 +1,47 @@
-import React from "react";
-import "chart.js/auto";
-import { Chart } from "react-chartjs-2";
-import { Pie } from "react-chartjs-2"; // Remove this line
+import React from 'react';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Pie } from 'react-chartjs-2';
 
-const Chart = ({ array }) => {
+ChartJS.register(ArcElement, Tooltip, Legend);
+
+export function Mychart(array) {
   console.log("Chart array: ", array);
-  const pieChartData = {
-    labels: [
-      "joy_percent",
+  const data = {
+  labels: ["joy_percent",
       "sadness_percent",
       "surprise_percent",
       "fear_percent",
-      "anger_percent",
-    ],
-    datasets: [
-      {
-        data: [
-          array["joy_percent"],
-          array["sadness_percent"],
-          array["surprise_percent"],
-          array["fear_percent"],
-          array["anger_percent"],
-        ],
-        label: "Text analysis based on emotions",
-        backgroundColor: [
-          "rgb(173, 173, 173)",
+      "anger_percent"],
+  datasets: [
+    {
+      label: "Text analysis based on emotions",
+      data: [array["array"]["joy_percent"],
+          array["array"]["sadness_percent"],
+          array["array"]["surprise_percent"],
+          array["array"]["fear_percent"],
+          array["array"]["anger_percent"]],
+      backgroundColor: [
+        "rgb(173, 173, 173)",
           "rgb(245, 213, 63)",
           "rgb(99, 111, 189)",
           "rgb(8, 232, 222)",
           "rgb(134, 219, 74)",
-          "rgb(222, 44, 44)",
-        ],
-        hoverBackgroundColor: [
-          "rgba(173, 173, 173,0.7)",
+          "rgb(222, 44, 44)"
+      ],
+      borderColor: [
+        "rgba(173, 173, 173,0.7)",
           "rgba(245, 213, 63,0.7)",
           "rgba(99, 111, 189,0.7)",
           "rgba(8, 232, 222,0.7)",
           "rgba(134, 219, 74,0.5)",
-          "rgba(222, 44, 44,0.5)",
-        ],
-      },
-    ],
-  };
-  const pieChart = (
-    <Pie
-      type="pie"
-      width={130}
-      height={50}
-      options={{
-        title: {
-          display: true,
-        },
-        legend: {
-          display: true, //Is the legend shown?
-          position: "top", //Position of the legend.
-        },
-      }}
-      data={pieChartData}
-    />
-  );
-  return pieChart;
+          "rgba(222, 44, 44,0.5)"
+      ],
+      borderWidth: 1,
+    },
+  ],
 };
-export default Chart;
+  return <Pie data={data} 
+              width={200}
+              height={200}
+              options={{ maintainAspectRatio: false }}/>;
+}
