@@ -4,7 +4,7 @@ import { Pie } from 'react-chartjs-2';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export function Mychart(array) {
+export function TotalChart(array) {
   console.log("Chart array: ", array);
   const data = {
   labels: ["neutral",
@@ -16,12 +16,12 @@ export function Mychart(array) {
   datasets: [
     {
       label: "Text analysis based on emotions",
-      data: [array["array"]["neutral_percent"],
-          array["array"]["joy_percent"],
-          array["array"]["sadness_percent"],
-          array["array"]["surprise_percent"],
-          array["array"]["fear_percent"],
-          array["array"]["anger_percent"]],
+      data: [array["array"]["total_neutral_percent"],
+          array["array"]["total_joy_percent"],
+          array["array"]["total_sadness_percent"],
+          array["array"]["total_surprise_percent"],
+          array["array"]["total_fear_percent"],
+          array["array"]["total_anger_percent"]],
       backgroundColor: [
         "rgb(173, 173, 173)",
           "rgb(245, 213, 63)",
