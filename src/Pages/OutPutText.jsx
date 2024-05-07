@@ -21,11 +21,11 @@ function OutputText({ array }) {
           )}
         </span>
       ))}
-      {array[1] && (
+      {/* {array[1] && (
         <div className="Diogram">
           <TotalChart array={array[array.length - 1]} />
         </div>
-      )}
+      )} */}
     </div>
   );
 }
