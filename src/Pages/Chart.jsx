@@ -7,7 +7,8 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 export function Mychart(array) {
   console.log("Chart array: ", array);
   const data = {
-  labels: ["joy_percent",
+  labels: ["neutral_percent",
+      "joy_percent",
       "sadness_percent",
       "surprise_percent",
       "fear_percent",
@@ -15,7 +16,8 @@ export function Mychart(array) {
   datasets: [
     {
       label: "Text analysis based on emotions",
-      data: [array["array"]["joy_percent"],
+      data: [array["array"]["neutral_percent"],
+          array["array"]["joy_percent"],
           array["array"]["sadness_percent"],
           array["array"]["surprise_percent"],
           array["array"]["fear_percent"],
