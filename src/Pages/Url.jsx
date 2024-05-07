@@ -1,13 +1,13 @@
 import { useState } from "react";
 import '../Pages_css/Url.css';
-import OutPutText from "./OutPutText";
+import OutputText from "./OutPutText.jsx";
 
 
 function Url() {
 
   
   
-
+  const [responseData, setResponseData] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
   const handleChange = (event) => {
@@ -21,7 +21,9 @@ function Url() {
         'Content-Type': 'text/html; charset=utf',
       },
       body: inputValue,
-    });
+    })
+    .then((response) => response.json())
+    .then((data) => setResponseData(data));
   };
 
   return (
@@ -36,7 +38,7 @@ function Url() {
       </div>
       <div className='answer-url'>
         <div className='answer-url-frame'>
-          {/* <OutPutText /> */}
+          <OutputText array={responseData} />
         </div>
       </div>  
     </div>

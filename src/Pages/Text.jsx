@@ -20,8 +20,8 @@ function Text() {
       },
       body: JSON.stringify({ inputValue }),
     })
-   .then((response) => response.json())
-   .then((data) => setResponseData(data));
+    .then((response) => response.json())
+    .then((data) => setResponseData(data));
   };
   return (
     <div className="section">

@@ -1,8 +1,15 @@
-
+import { useState } from "react";
 import '../Pages_css/Document.css';
 import DropFileInput from './DropFileInput';
+import OutputText from "./OutPutText.jsx";
 
 function Document() {
+
+  const [data, setData] = useState([]);
+
+   const updateData = (newData) => {
+    setData(newData);
+  };
 
   const onFileChange = (files) => {
     console.log(files);
@@ -11,10 +18,10 @@ function Document() {
   return (
     <div className='section'>
       <div className='answer-doc'>
-
+        <OutputText array={data} />
       </div>
       <div className='DropFileInput'>
-          <DropFileInput onFileChange={(files) => onFileChange(files)}/> {/* Функция для перетаскивания файлов */}
+          <DropFileInput onFileChange={(files) => onFileChange(files)} updateData={updateData}/> {/* Функция для перетаскивания файлов */}
       </div>
       {/* <form action="/">
         <button className='btn-doc-doc btn-doc-text-doc'>ТЕКСТ</button>
