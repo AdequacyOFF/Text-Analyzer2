@@ -7,7 +7,7 @@ from flask import Flask
 from flask_cors import CORS
 
 UPLOAD_FOLDER = "C:/Users/User/Desktop/Text-Analyzer2-Files"
-ALLOWED_EXTENSIONS = set(['txt','pdf','png'])
+ALLOWED_EXTENSIONS = set(['txt','pdf','png', 'img', 'jpg'])
 
 app = Flask(__name__)
 CORS(app)

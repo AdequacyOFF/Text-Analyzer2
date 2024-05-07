@@ -1,6 +1,5 @@
 import React from "react";
-// import { Chart } from "react-chartjs-2";
-import Chart from './Chart';
+import { Mychart } from './Chart.jsx';
 
 function OutputText({array}) {
   console.log(array);
@@ -16,9 +15,10 @@ function OutputText({array}) {
           {array.slice(0, array.length-1).map((item, index) => (
             <span key={index} className={item["conclusion"] + " output-text"}>
               {item["text"]}
-              { <div className="Diogram">
-                  <Chart array={data}/>
-                </div>}
+              {(
+                <div className="Diogram">
+                  <Mychart array={item}/>
+                </div>)}
             </span>
           ))}
         </div>
