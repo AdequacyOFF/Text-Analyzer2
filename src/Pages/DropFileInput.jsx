@@ -6,7 +6,7 @@ import '../Pages_css/DropFileInput.css';
 import { ImageConfig } from './ImageConfig.js'; 
 import uploadImg from '../assets/cloud-upload-regular-240.png';
 
-const DropFileInput = props => {
+const DropFileInput = (props) => {
 
     const wrapperRef = useRef(null);
 
@@ -80,13 +80,8 @@ const DropFileInput = props => {
                                   method: 'POST',
                                   body: formData,
                                 })
-                                 .then(response => {
-                                    if (response.status!== 200) {
-                                      console.error('Error:', response.status);
-                                      return;
-                                    }
-                                    console.log('File uploaded!');
-                                  })
+                                 .then((response) => response.json())
+                                 .then((data) => props.updateData(data))
                                  .catch(error => {
                                     console.error('Error:', error);
                                   });
