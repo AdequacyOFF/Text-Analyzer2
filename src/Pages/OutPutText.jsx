@@ -21,9 +21,9 @@ function OutputText({ array }) {
           )}
         </span>
       ))}
-      <div className="TotalDiogram">
+      {/* <div className="TotalDiogram">
         <TotalChart array={array[array.length - 1][array]} />
-      </div>
+      </div> */}
     </div>
   );
 }

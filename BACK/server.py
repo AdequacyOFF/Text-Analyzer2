@@ -6,7 +6,7 @@ from Controllers.basicAuthController import basic_auth
 from flask import Flask
 from flask_cors import CORS
 
-UPLOAD_FOLDER = "C:/Users/User/Desktop/Text-Analyzer2-Files"
+UPLOAD_FOLDER = "Files"
 ALLOWED_EXTENSIONS = set(['txt','pdf','png', 'img', 'jpg'])
 
 app = Flask(__name__)
