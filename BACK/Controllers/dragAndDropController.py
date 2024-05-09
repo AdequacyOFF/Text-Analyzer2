@@ -1,4 +1,5 @@
 import os
+import docx
 from flask import request, Response
 from werkzeug.utils import secure_filename
 from NeuralNetwork.sentiment_classifier import SentimentClassifier
@@ -24,11 +25,16 @@ def file_process(uploadFolder, allowedExtensions):
 
             filepath = (uploadFolder +"\\"+ filename).replace('/','\\')
             fileExtension = file.filename.rsplit('.', 1)[1]
-
+            print (filepath)
             match fileExtension:
                 case "txt":
                     s_file = open(filepath, encoding='utf-8')
                     text = s_file.read()
+                case  "doc" | "docx":
+                    doc = docx.Document(filepath)
+                    text = ""
+                    for paragraph in doc.paragraphs:
+                        text += paragraph.text
                 case "pdf":
                     text = pdfConvert(filepath)
                 case "png" | "img" | "jpg" | "jpeg": 
