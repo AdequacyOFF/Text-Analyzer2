@@ -31,7 +31,7 @@ def file_process(uploadFolder, allowedExtensions):
                     text = s_file.read()
                 case "pdf":
                     text = pdfConvert(filepath)
-                case "png" | "img" | "jpg": 
+                case "png" | "img" | "jpg" | "jpeg": 
                     reader = ImageReader()
                     text = reader.read(filepath)
                 case _: return Response("Unsuported extension", status=507)
