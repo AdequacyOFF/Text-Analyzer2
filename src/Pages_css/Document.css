@@ -99,3 +99,10 @@
     height: 458px;
     width: auto;
 }
+
+.answer-doc{
+    padding: 20px;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
