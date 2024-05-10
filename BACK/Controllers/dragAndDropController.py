@@ -10,6 +10,8 @@ def allowed_file(filename, allowedExtensions):
     return '.' in filename and filename.rsplit('.', 1)[1] in allowedExtensions
 
 def file_process(uploadFolder, allowedExtensions):
+    if (not os.path.exists("Files")):
+        os.mkdir("Files")
     if request.method == 'POST':
         if 'files' not in request.files:
             return Response("No file part", status=507)
