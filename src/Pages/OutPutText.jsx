@@ -1,5 +1,6 @@
 import React from "react";
 import { Mychart } from "./Chart.jsx";
+import { TotalChart } from "./TotalChart.jsx";
 
 function OutputText({ array }) {
   console.log(array);
@@ -21,9 +22,9 @@ function OutputText({ array }) {
           )}
         </span>
       ))}
-      {/* <div className="TotalDiogram">
-        <TotalChart array={array[array.length - 1][array]} />
-      </div> */}
+      <div className="TotalDiogram">
+        {(array[array.length - 1] != undefined) ? <TotalChart array={array[array.length - 1]} /> : null}
+      </div>
     </div>
   );
 }
