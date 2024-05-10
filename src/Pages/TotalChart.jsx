@@ -5,7 +5,7 @@ import { Pie } from 'react-chartjs-2';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export function TotalChart(array) {
-  console.log("Chart array: ", array);
+  console.log("TotalChart array: ", array);
   const data = {
   labels: ["neutral",
       "joy",
