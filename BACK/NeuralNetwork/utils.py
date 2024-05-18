@@ -7,6 +7,8 @@ def sentencer(text:str, num_sen=1, default_sen_len=30):
     i = 0
     while True:
       if i >= len(text):
+        if splitted.count(text) == 0:
+          splitted.append(string)
         break
 
       char = text[i]
@@ -26,6 +28,7 @@ def sentencer(text:str, num_sen=1, default_sen_len=30):
             i += 2
         
         if len(string) < default_sen_len:
+          i += 1
           continue
         
         splitted.append(string)
