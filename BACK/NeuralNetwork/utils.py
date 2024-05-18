@@ -1,8 +1,41 @@
 import re
 
-def sentencer(text:str, num_sen=1):
-    split_regex = re.compile(r'[.|!|?|…|!?]')
-    splitted = list(filter(lambda t: t, [t.strip() for t in split_regex.split(text)]))
+def sentencer(text:str, num_sen=1, default_sen_len=30):    
+    splitted = []
+    
+    string = ''
+    i = 0
+    while True:
+      if i >= len(text):
+        break
+
+      char = text[i]
+      string += char
+      
+      if char == '.' or char == '!' or char == '?':
+      
+        if(i < len(text) - 1):
+          if text[i + 1] == '?':
+            string += text[i + 1]
+            i += 1
+            
+        if(i < len(text) - 2):
+          if text[i + 1] == '.' and text[i + 2] == '.':
+            string += text[i + 1]
+            string += text[i + 2]
+            i += 2
+        
+        if len(string) < default_sen_len:
+          continue
+        
+        splitted.append(string)
+        
+        if i < len(text) - 1:
+          i += 1
+        
+        string = ''
+        
+      i += 1
     
     if num_sen == 1:
         return splitted
@@ -68,3 +101,4 @@ def find_profanity(text, dirt, lemmatizer):
     return None
   else:
     return remove_duplicates(list(r) + list(r1))
+    
