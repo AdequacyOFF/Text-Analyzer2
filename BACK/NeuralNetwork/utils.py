@@ -1,4 +1,6 @@
 import re
+import torch
+import numpy as np
 
 def sentencer(text:str, num_sen=1, default_sen_len=30):    
     splitted = []
@@ -7,7 +9,7 @@ def sentencer(text:str, num_sen=1, default_sen_len=30):
     i = 0
     while True:
       if i >= len(text):
-        if splitted.count(text) == 0:
+        if splitted.count(text) == 0 and len(string) > 5:
           splitted.append(string)
         break
 
@@ -104,4 +106,38 @@ def find_profanity(text, dirt, lemmatizer):
     return None
   else:
     return remove_duplicates(list(r) + list(r1))
+  
+def make_sum_100(array):
+  arr_sum = array.sum()
+  
+  diff = abs(100 - arr_sum)
+  
+  if arr_sum > 100:
+    max_i = np.argmax(array)
     
+    new_array = []
+    
+    for i in range(len(array)):
+      if i == max_i:
+        new_array.append(array[i] - diff)
+      else:
+        new_array.append(array[i])
+  else:
+    min_i = np.argmin(array)
+    
+    new_array = []
+    
+    for i in range(len(array)):
+      if i == min_i:
+        new_array.append(array[i] + diff)
+      else:
+        new_array.append(array[i])
+        
+  return np.array(new_array)
+    
+def get_device():
+  if torch.cuda.is_available():
+    return 'cuda:0'
+  else:
+    return 'cpu'
+  
