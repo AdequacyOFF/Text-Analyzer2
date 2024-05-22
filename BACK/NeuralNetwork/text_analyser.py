@@ -127,8 +127,11 @@ class TextAnalyser:
         fear_percent = round(probs[4] * 100, 2)
         anger_percent = round(probs[5] * 100, 2)
         
+        # Make profanity analys
+        prof_flag = self.profanity_analys(text)
+        
         return (text, prediction, neutral_percent, joy_percent, sadness_percent, 
-                surprise_percent, fear_percent, anger_percent)
+                surprise_percent, fear_percent, anger_percent, prof_flag)
         
         
     def style_analys(self, text):
@@ -179,7 +182,5 @@ class TextAnalyser:
         for sentence in sentences:
             out = self.emotion_analys(sentence)
             result.append(out)
-            
-        profanity_result = self.profanity_analys(text)
         
-        return (result, total_emotion_result, style_result, profanity_result)
+        return (result, total_emotion_result, style_result)
